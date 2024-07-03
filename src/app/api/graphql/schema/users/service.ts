@@ -1,47 +1,10 @@
-import { eq, sql, or, ilike, and, asc } from "drizzle-orm";
+import { eq, sql, or, ilike, and } from "drizzle-orm";
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
 
 // ** import schema
 import { tbl_users } from "@/db/schema";
 
 export const userService = {
-  // getUsers: async (
-  //   db: NodePgDatabase,
-  //   offset: number,
-  //   limit: number,
-  //   search?: string
-  // ) => {
-  //   let conditions = [];
-
-  //   if (search) {
-  //     conditions.push(
-  //       or(
-  //         ilike(tbl_users.name, `%${search}%`),
-  //         ilike(tbl_users.email, `%${search}%`)
-  //       )
-  //     );
-  //   }
-
-  //   const whereCondition =
-  //     conditions.length > 0 ? and(...conditions) : undefined;
-
-  //   const userData = await db
-  //     .select()
-  //     .from(tbl_users)
-  //     .offset(offset)
-  //     .limit(limit)
-
-  //   const totalCount: number = await db
-  //     .select({ count: sql`count(*)`.mapWith(Number) })
-  //     .from(tbl_users)
-  //     .where(whereCondition)
-  //     .then((res) => res[0].count);
-
-  //   return {
-  //     userData,
-  //     totalCount,
-  //   };
-  // },
 
   getUsers: async (
     db: NodePgDatabase,

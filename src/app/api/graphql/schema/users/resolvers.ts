@@ -10,7 +10,6 @@ interface Context {
   db: NodePgDatabase;
 }
 
-
 interface UserByIdArgs {
   id: number;
 }

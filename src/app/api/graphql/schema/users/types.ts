@@ -33,7 +33,6 @@ input UpdateUserInput{
   name: String
   email: String
   profile: String
-
 }
 
 type Query {
